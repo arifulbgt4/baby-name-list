@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  width: 100%;
+}
+.input {
+  height: 50px;
+  width: 75%;
+  background: #f9f9f9;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0 20px;
+  border: 1px solid rgb(78, 123, 237);
+  border-radius: 25px 0 0 25px;
+  font-size: 16px;
+}
+.button {
+  display: block;
+  width: 25%;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  background: rgb(78, 123, 237);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0 25px 25px 0;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: rgb(60, 103, 213);
+}
