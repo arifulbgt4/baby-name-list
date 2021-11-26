@@ -12,18 +12,23 @@ export const toggleComplete = (payload) => (dispatch) =>
     payload,
   });
 
-export const updateChilds = (payload) => (dispatch) => {
-  console.log('payload', payload);
-  return dispatch({
+export const updateChilds = (payload) => (dispatch) =>
+  dispatch({
     type: types.UPDATE_CHILDS,
     payload,
   });
-};
+
+export const shortChildName = (payload) => (dispatch) =>
+  dispatch({
+    type: types.SHORT_CHILDS_NAME,
+    payload,
+  });
 
 const actions = {
   addName,
   toggleComplete,
   updateChilds,
+  shortChildName,
 };
 
 export default actions;
