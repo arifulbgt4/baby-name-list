@@ -28,6 +28,7 @@ const childs = (state = initState, action) => {
         minute: '2-digit',
         second: '2-digit',
       }).format(today);
+
       const values = [
         ...state,
         {
@@ -39,6 +40,7 @@ const childs = (state = initState, action) => {
       ];
       toLocalStorage(values);
       return values;
+
     case types.TOGGLE_COMPLETE:
       const toggledValue = state.map((d) => {
         if (d?.id === action.payload) {
@@ -49,11 +51,14 @@ const childs = (state = initState, action) => {
         }
         return d;
       });
+
       toLocalStorage(toggledValue);
       return toggledValue;
+
     case types.UPDATE_CHILDS:
       toLocalStorage(action.payload);
       return [...action.payload];
+
     case types.SHORT_CHILDS_NAME:
       if (action.payload === 'time') {
         const byTime = state.sort((a, b) =>
