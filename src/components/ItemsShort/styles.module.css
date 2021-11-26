@@ -1,0 +1,20 @@
+.listWrapper {
+  padding: 0;
+  display: flex;
+}
+.listWrapper li {
+  list-style: none;
+  margin: 0 4px;
+}
+.listWrapper li button {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 3px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.listWrapper li button.active {
+  border: 1px solid rgb(78, 123, 237);
+  background: rgb(78, 123, 237);
+  color: #fff;
+}

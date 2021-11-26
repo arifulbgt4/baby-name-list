@@ -4,13 +4,16 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
 
+import ListItem from '../ListItem/ListItem';
 import { updateChilds } from '../../state/ducks/ui/actions';
 
-import ListItem from '../ListItem/ListItem';
+import styles from './styles.module.css'
 
 const List = () => {
   const childs = useSelector((state) => state.uiState.childs);
+
   const dispatch = useDispatch();
+
   const moveCard = useCallback(
     (dragIndex, hoverIndex) => {
       const dragCard = childs[dragIndex];
@@ -43,7 +46,7 @@ const List = () => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <ul>
+      <ul className={styles.listWrapper}>
         {childs &&
           childs.map((d, i) => {
             const { id, name, complete } = d;

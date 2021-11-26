@@ -1,3 +1,10 @@
+.formWrapper{
+  margin: 0 0 30px;
+}
+.formWrapper p{
+  color: red;
+  margin: 5px 15px 0;
+}
 .form {
   display: flex;
   width: 100%;

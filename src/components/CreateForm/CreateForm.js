@@ -34,7 +34,7 @@ const CreateForm = () => {
     }
   };
   return (
-    <>
+    <div className={styles.formWrapper}>
       <form id='create-form' className={styles.form} onSubmit={handleSubmit}>
         <input
           className={styles.input}
@@ -47,7 +47,7 @@ const CreateForm = () => {
         </button>
       </form>
       {error && <p>{error}</p>}
-    </>
+    </div>
   );
 };
 
